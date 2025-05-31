@@ -1,0 +1,489 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <style>
+    @keyframes sway {
+      0%,
+      100% {
+        transform: rotate(-3deg);
+      }
+      50% {
+        transform: rotate(3deg);
+      }
+    }
+    @keyframes float {
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+    .animate-sway {
+      animation: sway 8s infinite ease-in-out;
+    }
+    .animate-float {
+      animation: float 6s infinite ease-in-out;
+    }
+  </style>
+  <script is:inline>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "nature-green": "#2e7d32",
+            "soft-brown": "#8d6e63",
+            "earth-green": "#33691e",
+            "warm-yellow": "#f9a825",
+          },
+        },
+      },
+    };
+  </script>
+
+  <main>
+
+    <section
+      id="hero"
+      class="min-h-screen flex items-center relative overflow-hidden"
+    >
+      <div
+        class="container mx-auto px-6 py-24 grid md:grid-cols-2 gap-12 items-center"
+      >
+        <div class="relative z-10 space-y-8">
+          <h1
+            class="text-5xl md:text-6xl font-['Playfair_Display'] font-bold leading-tight"
+          >
+            <span class="text-emerald-700">Jardinería Profesional</span><br />
+            en <span class="text-stone-700">La Molina</span>
+          </h1>
+
+          <div class="space-y-4">
+            <p class="text-xl text-stone-600">
+              <i class="fas fa-seedling text-emerald-500 mr-2"></i>
+              Más de 10 años transformando espacios verdes con pasión y expertise.
+            </p>
+            <ul class="text-emerald-700 list-disc pl-6 space-y-2">
+              <li>
+                <i class="fas fa-certificate text-sm mr-2"></i>Certificaciones
+                de la Agraria
+              </li>
+              <li>
+                <i class="fas fa-seedling text-sm mr-2"></i>Mantenimientod de
+                Jardines
+              </li>
+              <li><i class="fas fa-bug text-sm mr-2"></i>Control de Plagas</li>
+            </ul>
+          </div>
+
+          <a
+            href="https://wa.me/924932128"
+            class="bg-emerald-600 w-80 text-white px-8 py-4 rounded-lg hover:bg-emerald-700 transition-all shadow-lg transition-transform duration-300 ease-in-out hover:scale-105 flex items-center gap-2"
+          >
+            <i class="fas fa-phone"></i>
+            Solicitar Presupuesto
+          </a>
+        </div>
+
+        <div
+          class="relative group justify-center flex w-full items-center h-[420px] w-[400px]"
+        >
+          <div
+            class="absolute -inset-4 bg-emerald-300/30 rounded-lg transform animate-sway transition-all duration-500"
+          >
+          </div>
+          <img
+            src="/nice.png"
+            class="rounded-2xl h-[400px] object-cover shadow-2xl relative z-10 transform transition duration-700 group-hover:scale-105"
+            alt="Servicios de jardinería"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Trabajos -->
+    <section id="trabajos" class="py-16 md:py-24">
+      <div class="container mx-auto px-4 md:px-6">
+        <div>
+          <h2
+            class="text-4xl font-['Playfair_Display'] font-bold text-center mb-3 text-stone-800"
+          >
+            Nuestros <span class="text-emerald-700">Trabajos</span>
+          </h2>
+          <div class="w-[200px] mx-auto mb-12 h-1 bg-emerald-300"></div>
+        </div>
+
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-7"
+        >
+          <!-- Elemento destacado -->
+          <div
+            class="col-span-1 sm:col-span-2 row-span-2 rounded-xl overflow-hidden relative"
+          >
+            <img
+              src="/diseño.jpg"
+              alt="Jardín Moderno"
+              class="w-full h-[605px] md:h-[605px] object-cover"
+            />
+            <div
+              class="bg-stone-900/30 absolute inset-0 flex flex-col justify-end p-5 md:p-8"
+            >
+              <span
+                class="text-white text-xl md:text-2xl font-['Playfair_Display'] font-bold"
+                >Jardín Moderno</span
+              >
+              <p class="text-stone-100 mt-2">
+                Diseño contemporáneo con líneas limpias y vegetación
+                estructurada
+              </p>
+              <a
+                href="#"
+                class="mt-3 text-emerald-300 hover:text-white text-sm flex items-center"
+              >
+                Ver detalles
+                <svg
+                  class="ml-2 w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="rounded-xl overflow-hidden relative h-64 md:h-72 transition-all duration-400 ease-in-out transform origin-center hover:scale-103 hover:z-10 hover:shadow-lg"
+          >
+            <img
+              src="/mantenimiento.jpg"
+              alt="Paisajismo Urbano"
+              class="w-full h-full object-cover"
+            />
+            <div
+              class="bg-stone-900/30 absolute inset-0 flex flex-col justify-end p-5 opacity-0 hover:opacity-100 transition-opacity duration-300"
+            >
+              <span class="text-white text-lg font-['Playfair_Display']"
+                >Mantenimiento de Jardin</span
+              >
+              <a
+                href="#"
+                class="mt-3 text-emerald-300 hover:text-white text-sm flex items-center"
+              >
+                Ver detalles
+                <svg
+                  class="ml-2 w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="rounded-xl overflow-hidden relative h-64 md:h-72 transition-all duration-400 ease-in-out transform origin-center hover:scale-103 hover:z-10 hover:shadow-lg"
+          >
+            <img
+              src="/mantenimiento1.jpg"
+              alt="Jardines Verticales"
+              class="w-full h-full object-cover"
+            />
+            <div
+              class="bg-stone-900/30 absolute inset-0 flex flex-col justify-end p-5 opacity-0 hover:opacity-100 transition-opacity duration-300"
+            >
+              <span class="text-white text-lg font-['Playfair_Display']"
+                >Mantenimiento de Jardin</span
+              >
+              <a
+                href="#"
+                class="mt-3 text-emerald-300 hover:text-white text-sm flex items-center"
+              >
+                Ver detalles
+                <svg
+                  class="ml-2 w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="rounded-xl overflow-hidden relative h-64 md:h-72 transition-all duration-400 ease-in-out transform origin-center hover:scale-103 hover:z-10 hover:shadow-lg"
+          >
+            <img
+              src="/siembra.jpg"
+              alt="Diseño de Exteriores"
+              class="w-full h-full object-cover"
+            />
+            <div
+              class="bg-stone-900/30 absolute inset-0 flex flex-col justify-end p-5 opacity-0 hover:opacity-100 transition-opacity duration-300"
+            >
+              <span class="text-white text-lg font-['Playfair_Display']"
+                >Instalacion de Cesped</span
+              >
+              <a
+                href="#"
+                class="mt-3 text-emerald-300 hover:text-white text-sm flex items-center"
+              >
+                Ver detalles
+                <svg
+                  class="ml-2 w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="rounded-xl overflow-hidden relative h-64 md:h-72 transition-all duration-400 ease-in-out transform origin-center hover:scale-103 hover:z-10 hover:shadow-lg"
+          >
+            <img
+              src="/poda.jpg"
+              alt="Jardines Sostenibles"
+              class="w-full h-full object-cover"
+            />
+            <div
+              class="bg-stone-900/30 absolute inset-0 flex flex-col justify-end p-5 opacity-0 hover:opacity-100 transition-opacity duration-300"
+            >
+              <span class="text-white text-lg font-['Playfair_Display']"
+                >Recorte y Formacion de Follaje</span
+              >
+              <a
+                href="#"
+                class="mt-3 text-emerald-300 hover:text-white text-sm flex items-center"
+              >
+                Ver detalles
+                <svg
+                  class="ml-2 w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="rounded-xl overflow-hidden relative h-64 md:h-72 transition-all duration-400 ease-in-out transform origin-center hover:scale-103 hover:z-10 hover:shadow-lg"
+          >
+            <img
+              src="/instalacion.jpg"
+              alt="Terrazas Verdes"
+              class="w-full h-full object-cover"
+            />
+            <div
+              class="bg-stone-900/30 absolute inset-0 flex flex-col justify-end p-5 opacity-0 hover:opacity-100 transition-opacity duration-300"
+            >
+              <span class="text-white text-lg font-['Playfair_Display']"
+                >Instalacion de Cesped</span
+              >
+              <a
+                href="#"
+                class="mt-3 text-emerald-300 hover:text-white text-sm flex items-center"
+              >
+                Ver detalles
+                <svg
+                  class="ml-2 w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicios" class="py-24">
+      <div class="container mx-auto px-6">
+        <div>
+          <h2
+            class="text-4xl font-['Playfair_Display'] font-bold text-center mb-3 text-stone-800"
+          >
+            Nuestros <span class="text-emerald-700">Servicios</span>
+          </h2>
+          <div class="w-[200px] mx-auto mb-12 h-1 bg-emerald-300"></div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div
+            class="bg-white p-8 md:p-4 lg:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out hover:scale-105 border-2 border-emerald-50"
+          >
+            <h3 class="text-2xl font-bold mb-4">Mantenimiento de Jardín</h3>
+            <ul class="text-stone-600 space-y-2">
+              <li>
+                <i class="fas fa-check text-emerald-500 mr-2"></i>Podas
+                profesionales
+              </li>
+              <li>
+                <i class="fas fa-check text-emerald-500 mr-2"></i>Fertilización
+                programada
+              </li>
+              <li>
+                <i class="fas fa-check text-emerald-500 mr-2"></i>Control de
+                plagas
+              </li>
+            </ul>
+            <button
+              class="mt-4 text-emerald-600 hover:text-emerald-800 flex items-center"
+            >
+              Más info <i class="fas fa-arrow-right ml-2"></i>
+            </button>
+          </div>
+
+          <div
+            class="bg-white p-8 md:p-4 lg:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out hover:scale-105"
+          >
+            <h3 class="text-2xl font-bold mb-4">Personalizacion & Siembra</h3>
+            <ul class="text-stone-600 space-y-2">
+              <li>
+                <i class="fas fa-check text-emerald-500 mr-2"></i>Organizacion y
+                Cultivo de Plantas
+              </li>
+              <li>
+                <i class="fas fa-check text-emerald-500 mr-2"></i>Instalación de
+                césped
+              </li>
+              <li>
+                <i class="fas fa-check text-emerald-500 mr-2"></i>Plantas
+                ornamentales
+              </li>
+            </ul>
+            <button
+              class="mt-4 text-emerald-600 hover:text-emerald-800 flex items-center"
+            >
+              Más info <i class="fas fa-arrow-right ml-2"></i>
+            </button>
+          </div>
+
+          <div
+            class="bg-white p-8 md:p-5 lg:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out hover:scale-105"
+          >
+            <h3 class="text-2xl font-bold mb-4">Productos</h3>
+            <ul class="text-stone-600 space-y-2">
+              <li>
+                <i class="fas fa-check text-emerald-500 mr-2"></i>Abonos
+                orgánicos
+              </li>
+              <li>
+                <i class="fas fa-check text-emerald-500 mr-2"></i>Sustratos
+                especializados
+              </li>
+              <li>
+                <i class="fas fa-check text-emerald-500 mr-2"></i>Plantas de
+                calidad
+              </li>
+            </ul>
+            <button
+              class="m text-emerald-600 hover:text-emerald-800 flex items-center"
+            >
+              Más info <i class="fas fa-arrow-right ml-2"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="areas" class="py-16 bg-emerald-600 text-white">
+      <div class="container mx-auto px-6">
+        <div>
+          <h2
+            class="text-4xl font-['Playfair_Display'] font-bold text-center mb-3"
+          >
+            <span class="">Áreas de Servicio</span>
+          </h2>
+          <div class="w-[200px] mx-auto mb-12 h-1 bg-stone-900"></div>
+        </div>
+
+        <div class="flex flex-col items-center justify-center gap-6">
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-6 p-6">
+            <h3
+              class="text-xs md:text-sm rounded p-2 font-bold mb-4 flex items-center gap-2 bg-white/10 backdrop-blur border border-white/20"
+            >
+              <i class="fas fa-map-marker-alt text-warm-yellow"></i>
+              La Molina
+            </h3>
+            <h3
+              class="text-xs md:text-sm rounded p-2 font-bold mb-4 flex items-center gap-2 bg-white/10 backdrop-blur border border-white/20"
+            >
+              <i class="fas fa-map-marker-alt text-warm-yellow"></i>
+              La Planicie
+            </h3>
+            <h3
+              class="text-xs md:text-sm rounded p-2 font-bold mb-4 flex items-center gap-2 bg-white/10 backdrop-blur border border-white/20"
+            >
+              <i class="fas fa-map-marker-alt text-warm-yellow"></i>
+              Sol de la Molina
+            </h3>
+            <h3
+              class="text-xs md:text-sm rounded p-2 font-bold mb-4 flex items-center gap-2 bg-white/10 backdrop-blur border border-white/20"
+            >
+              <i class="fas fa-map-marker-alt text-warm-yellow"></i>
+              Rinconada del Lago
+            </h3>
+          </div>
+
+          <iframe
+            class="rounded-lg w-full px-4"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14386.484825770856!2d-76.92102650205848!3d-12.083400147669739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1ses-419!2spe!4v1748627102871!5m2!1ses-419!2spe"
+            width="400"
+            height="400"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>

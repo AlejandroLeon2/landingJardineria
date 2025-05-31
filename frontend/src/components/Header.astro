@@ -1,0 +1,56 @@
+<header
+  class="sticky top-0 z-50 bg-stone-900 text-stone-100 shadow-xl"
+  x-data="{ isOpen: false }"
+>
+  <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <div
+      class="flex items-center space-x-3 transition-transform duration-300 ease-in-out hover:scale-105"
+    >
+      <a href="#hero" class="w-8 h-8 text-2xl fas fa-seedling text-white"></a>
+      <div>
+        <span class="text-2xl font-['Playfair_Display'] font-bold"
+          >Jardinería Pedro</span
+        >
+        <p class="text-xs text-emerald-300">+10 años Experiencia</p>
+      </div>
+    </div>
+
+    <!-- Menú Desktop -->
+    <div class="hidden md:flex space-x-8 items-center">
+      <a href="#servicios" class="hover:text-emerald-300 transition"
+        >Servicios</a
+      >
+      <a href="#trabajos" class="hover:text-emerald-300 transition"
+        >Experiencia</a
+      >
+      <a href="#areas" class="hover:text-emerald-300 transition"
+        >Áreas de Servicio</a
+      >
+      <a
+        href="#contacto"
+        class="bg-emerald-600 px-4 py-2 text-center rounded hover:bg-emerald-700 transition"
+        >Contacto</a
+      >
+    </div>
+
+    <!-- Menú Mobile -->
+    <button @click="isOpen = !isOpen" class="md:hidden text-2xl"> ☰ </button>
+  </nav>
+
+  <!-- Menú Mobile Dropdown -->
+  <div
+    class="md:hidden absolute w-full bg-stone-800"
+    x-show="isOpen"
+    @click.away="isOpen = false"
+  >
+    <div class="px-6 py-4 space-y-4">
+      <a href="#servicios" class="block hover:text-emerald-300">Servicios</a>
+      <a href="#trabajos" class="block hover:text-emerald-300">Experiencia</a>
+      <a href="#areas" class="block hover:text-emerald-300">Áreas de Servicio</a
+      >
+      <a href="#contacto" class="block bg-emerald-600 px-4 py-2 rounded"
+        >Contacto</a
+      >
+    </div>
+  </div>
+</header>
