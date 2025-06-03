@@ -5,7 +5,7 @@ export const Trabajos = {
         descripcion:
             "Innovación y creatividad para transformar tus espacios exteriores en entornos únicos.",
         imagen: {
-            link: "https://jardineria-pedro.com/img/diseno-jardin.jpg",
+            link: "https://github.com/AlejandroLeon2/landingJardineria/blob/main/imagenes/dise%C3%B1o.jpg?raw=true",
             title: "Diseño de Jardín",
             arialabel: "Imagen de diseño de jardín",
             nombre: "Diseño de Jardín"
@@ -23,7 +23,7 @@ export const Trabajos = {
             descripcion:
                 "Servicios de mantenimiento para conservar y embellecer tu jardín.",
             imagen: {
-                link: "https://jardineria-pedro.com/img/mantenimiento-jardin.jpg",
+                link: "https://github.com/AlejandroLeon2/landingJardineria/blob/main/imagenes/Imagen%20de%20WhatsApp%202025-05-31%20a%20las%2023.20.21_6027a897.jpg?raw=true",
                 title: "Mantenimiento de Jardín",
                 arialabel: "Imagen de mantenimiento de jardín",
                 nombre: "Mantenimiento de Jardín"
@@ -41,7 +41,7 @@ export const Trabajos = {
             descripcion:
                 "Servicios para instalar y renovar céspedes en residencias y negocios.",
             imagen: {
-                link: "https://jardineria-pedro.com/img/instalacion-cesped.jpg",
+                link: "https://github.com/AlejandroLeon2/landingJardineria/blob/main/imagenes/siembra.jpg?raw=true",
                 title: "Instalación de Césped",
                 arialabel: "Imagen de instalación de césped",
                 nombre: "Instalación de Césped"
@@ -58,7 +58,7 @@ export const Trabajos = {
             descripcion:
                 "Poda profesional para mantener tus arbustos sanos y estéticos.",
             imagen: {
-                link: "https://jardineria-pedro.com/img/poda-arbustos.jpg",
+                link: "https://github.com/AlejandroLeon2/landingJardineria/blob/main/imagenes/Imagen%20de%20WhatsApp%202025-05-22%20a%20las%2018.26.26_260bb0c9.jpg?raw=true",
                 title: "Poda de Arbustos",
                 arialabel: "Imagen de poda de arbustos",
                 nombre: "Poda de Arbustos"
@@ -75,7 +75,7 @@ export const Trabajos = {
             descripcion:
                 "Fumigación profesional para el control de plagas en jardines y áreas verdes.",
             imagen: {
-                link: "https://jardineria-pedro.com/img/fumigacion.jpg",
+                link: "https://github.com/AlejandroLeon2/landingJardineria/blob/main/imagenes/Imagen%20de%20WhatsApp%202025-05-31%20a%20las%2023.16.58_8c053120.jpg?raw=true",
                 title: "Fumigación",
                 arialabel: "Imagen de fumigación",
                 nombre: "Fumigación"
@@ -89,4 +89,3 @@ export const Trabajos = {
         }
     ]
 };
-  
