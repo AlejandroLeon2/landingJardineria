@@ -75,7 +75,7 @@ export const Trabajos = {
             descripcion:
                 "Fumigación profesional para el control de plagas en jardines y áreas verdes.",
             imagen: {
-                link: "/public/Imagen de WhatsApp 2025-05-31 a las 23.16.58_8c053120.jpg",
+                link: "https://github.com/AlejandroLeon2/landingJardineria/blob/main/imagenes/Imagen%20de%20WhatsApp%202025-05-31%20a%20las%2023.16.58_8c053120.jpg?raw=true",
                 title: "Fumigación",
                 arialabel: "Imagen de fumigación",
                 nombre: "Fumigación"
