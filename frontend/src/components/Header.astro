@@ -1,56 +1,168 @@
 <header
-  class="sticky top-0 z-50 bg-stone-900 text-stone-100 shadow-xl"
-  x-data="{ isOpen: false }"
+  class="fixed w-[100%] z-50 overflow-hidden bg-transparente md:bg-black poppins font-semibold text-stone-100 shadow-xl"
 >
-  <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+  <nav
+    class="md:bg-black w-full lg:px-4 max-w-400 mx-auto flex flex-col md:flex-row justify-center items-center"
+  >
     <div
-      class="flex items-center space-x-3 transition-transform duration-300 ease-in-out hover:scale-105"
+      class="flex items-center py-3 bg-black w-full md:w-100 justify-around md:justify-stretch space-x-3 transition-transform duration-300 ease-in-out"
     >
-      <a href="#hero" class="w-8 h-8 text-2xl fas fa-seedling text-white"></a>
-      <div>
-        <span class="text-2xl font-['Playfair_Display'] font-bold"
-          >Jardinería Pedro</span
+      <a
+        href="#hero"
+        class="flex justify-center items-center"
+        title="Volver al inicio de Jardinería Pedro"
+        aria-label="Volver al inicio"
+      >
+        <div
+          class="w-13 text-center text-xl md:text-3xl h-10 bg-no-repeat bg-[url('logo-jardineriaPedro.svg')] text-neonGreen"
+          aria-hidden="true"
         >
-        <p class="text-xs text-emerald-300">+10 años Experiencia</p>
-      </div>
+        </div>
+
+        <p class="text-2xl flex flex-col face text-white">
+          Jardinería Pedro
+          <span class="text-sm text-neonGreen"
+            >+ 10 años de experiencia</span
+          >
+        </p>
+      </a>
+
+      <button
+        id="menu-hamburguesa"
+        class="md:hidden text-white text-3xl hover:scale-105 active:scale-95"
+      >
+        ☰
+      </button>
     </div>
 
-    <!-- Menú Desktop -->
-    <div class="hidden md:flex space-x-8 items-center">
-      <a href="#servicios" class="hover:text-emerald-300 transition"
-        >Servicios</a
+    <div
+      id="menu-nav"
+      class="hidden md:flex flex md:flex-row poppins flex-col w-full items-center md:justify-end gap-4 px-4 py-2 bg-black/60 backdrop-blur-xs space-y-2"
+    >
+      <a
+        href="#servicios"
+        class="hover:text-neonGreen cerrar active:text-dorado md:linea md:w-auto py-1 w-full md:block transition"
+        aria-label="Ver servicios de jardinería"
+        title="Explora nuestros servicios de jardinería"
       >
-      <a href="#trabajos" class="hover:text-emerald-300 transition"
-        >Experiencia</a
+        Servicios
+      </a>
+
+      <a
+        href="#trabajos"
+        class="hover:text-neonGreen cerrar active:text-dorado md:linea md:w-auto py-1 w-full md:block transition"
+        aria-label="Ver experiencia en jardinería"
+        title="Descubre nuestros proyectos de jardinería"
       >
-      <a href="#areas" class="hover:text-emerald-300 transition"
-        >Áreas de Servicio</a
+        Experiencia
+      </a>
+
+      <a
+        href="#areas"
+        class="hover:text-neonGreen cerrar active:text-dorado md:linea md:w-auto py-1 w-full md:block transition"
+        aria-label="Ver áreas de servicio"
+        title="Consulta las zonas donde ofrecemos jardinería"
       >
+        Áreas de Servicio
+      </a>
+
       <a
         href="#contacto"
-        class="bg-emerald-600 px-4 py-2 text-center rounded hover:bg-emerald-700 transition"
-        >Contacto</a
+        class="bg-neonGreen px-3 font-bold cerrar md:block py-1.5 mb-2 md:mb-0 text-center text-black rounded active:scale-95 hover:scale-105 hover:bg-neonGreen/90 transition"
+        title="Contáctanos aquí"
+        aria-label="Ir a la sección de contacto"
       >
+        Contacto
+      </a>
     </div>
-
-    <!-- Menú Mobile -->
-    <button @click="isOpen = !isOpen" class="md:hidden text-2xl"> ☰ </button>
   </nav>
-
-  <!-- Menú Mobile Dropdown -->
-  <div
-    class="md:hidden absolute w-full bg-stone-800"
-    x-show="isOpen"
-    @click.away="isOpen = false"
-  >
-    <div class="px-6 py-4 space-y-4">
-      <a href="#servicios" class="block hover:text-emerald-300">Servicios</a>
-      <a href="#trabajos" class="block hover:text-emerald-300">Experiencia</a>
-      <a href="#areas" class="block hover:text-emerald-300">Áreas de Servicio</a
-      >
-      <a href="#contacto" class="block bg-emerald-600 px-4 py-2 rounded"
-        >Contacto</a
-      >
-    </div>
-  </div>
 </header>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document
+      .getElementById("menu-hamburguesa")
+      ?.addEventListener("click", () => {
+        document.getElementById("menu-nav")?.classList.toggle("hidden");
+        document.querySelectorAll(".cerrar").forEach((item) => {
+          item.addEventListener("click", () => {
+            document.getElementById("menu-nav")?.classList.add("hidden");
+          });
+        });
+      });
+  });
+</script>
+<style>
+  @keyframes sway {
+    0%,
+    100% {
+      transform: rotate(-3deg);
+    }
+    50% {
+      transform: rotate(3deg);
+    }
+  }
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  .animate-sway {
+    animation: sway 8s infinite ease-in-out;
+  }
+  .animate-float {
+    animation: float 6s infinite ease-in-out;
+  }
+</style>
+
+<style>
+  .rotate-vertical:hover {
+    animation: rotate-vertical 0.5s linear forwards;
+  }
+  .rotate-vertical:focus {
+    animation: rotate-vertical 0.5s linear forwards;
+  }
+
+  @keyframes rotate-vertical {
+    0% {
+      transform: rotateY(0deg);
+    }
+    100% {
+      transform: rotateY(360deg);
+    }
+  }
+  .linea {
+    position: relative;
+    padding: 0 8px;
+    text-decoration: none;
+    color: white;
+  }
+
+  .linea:last-child {
+    border-right: none;
+  }
+
+  .linea::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #95ff00;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .linea:hover::before {
+    transform: scaleX(1);
+  }
+  .linea:active::before,
+  .linea.active::before {
+    transform: scaleX(1);
+  }
+</style>

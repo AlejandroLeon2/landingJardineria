@@ -1,0 +1,37 @@
+---
+import ItemServicesComponent from "./ItemServicesComponent.astro";
+const { servicio } = Astro.props;
+---
+
+<li class="relative hover:scale-105 min-h-70 delay-200 duration-300">
+  <div class="absolute  inset-0 rotate-3 translate-x-4 bg-white rounded-2xl">
+  </div>
+
+  <article
+    class="bg-white flex flex-col backdrop-blur-2xl p-8 rounded-2xl h-full border-gray-200 border shadow-lg hover:shadow-xl transition-all duration-300 ease-out"
+  >
+    <header>
+      <h2 class="text-2xl face font-bold mb-4">{servicio.servicio}</h2>
+    </header>
+
+    <ul class="text-stone-600 space-y-2">
+      {
+        servicio.descripcion.map((item) => (
+          <ItemServicesComponent nombre={item} />
+        ))
+      }
+    </ul>
+
+    <footer class="mt-auto">
+      <a
+        href={servicio.links.link}
+        class="mt-2 text-verdenew kaus hover:text-neonGreen flex items-center"
+        aria-label={servicio.links.title}
+        title={servicio.links.title}
+        >{servicio.links.nombre}<i
+          class="fas fa-arrow-right ml-2"
+          aria-hidden="true"></i>
+      </a>
+    </footer>
+  </article>
+</li>

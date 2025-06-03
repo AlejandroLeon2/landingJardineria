@@ -1,0 +1,18 @@
+---
+import CardServicesComponent from "../ui/CardServicesComponent.astro";
+import TitleComponent from "../dynamic/TitleComponent.astro";
+const { data } = Astro.props;
+---
+
+<section id="servicios" class="py-24 relative w-full overflow-hidden bg-beige">
+  <TitleComponent palabra1="Nuestro" palabra2="Servicios" />
+  <div class="container max-w-400 mx-auto px-6">
+    <ul class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+      {
+        data.servicios.map((servicios) => (
+          <CardServicesComponent servicio={servicios} />
+        ))
+      }
+    </ul>
+  </div>
+</section>

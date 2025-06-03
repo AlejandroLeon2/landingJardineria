@@ -1,1 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import "tailwindcss";
+
+.face {
+    font-family: 'Playfair Display';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/playfairdisplay/v37/nuFiD-vYSZviVYUb_rj3ij__anPXDTjYgFE_.woff2) format('woff2');
+        unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+
+}
+
+.kaus {
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.poppins {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@theme {
+    --color-verde: rgb(17.017% 58.877% 27.485%);
+    --color-verdenew: #6BB601;
+    --color-verdeoscuro: #0c342c;
+    --color-turquesa: #1abc9c;
+    --color-verdeLimon: #E2ED2C;
+    --color-neonCyan: #A8ECFB;
+    --color-neonGreen: #95ff00;
+    --color-beige: #FDDF97;
+    --color-dorado: #f39c12;
+    --color-verdeNeonBrillante: #E3EF26;
+}

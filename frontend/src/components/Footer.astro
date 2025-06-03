@@ -1,22 +1,35 @@
-<footer id="contacto" class="bg-stone-900 text-stone-400 py-12">
+---
+const { data } = Astro.props;
+---
+
+<footer
+  id="contacto"
+  class="bg-stone-900 text-sm md:text-md lg:text-lg poppins text-stone-400 py-12"
+>
   <div class="container mx-auto px-6">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       <div class="space-y-4">
         <h3 class="text-white font-['Playfair_Display'] text-xl">Contacto</h3>
         <ul class="space-y-2">
-          <li class="flex items-center gap-2">
-            <i class="fas fa-phone text-warm-yellow"></i>
-            <a href="https://wa.me/947025231">947025231</a>
+          <li class="flex items-center hover:text-dorado gap-2">
+            <i aria-hidden="true" class="fas fa-phone text-neonGreen"></i>
+            <a
+              aria-label={data.redes[0].ariaLabel}
+              title={data.redes[0].title}
+              href={data.redes[0].link}>{data.redes[0].numero}</a
+            >
           </li>
-          <li class="flex items-center gap-2">
-            <i class="fas fa-envelope text-warm-yellow"></i>
-            <a class="text-sm" href="mailto:alejandroleonpedro7@gmail.com"
-              >alejandroleonpedro7@gmail.com</a
+          <li class="flex items-center hover:text-dorado gap-2">
+            <i class="fas fa-envelope text-white"></i>
+            <a
+              class="md:break-all"
+              title={`correo de ${data.perfilProfesional.profesion}`}
+              href={`mailto:${data.correo}`}>{data.correo}</a
             >
           </li>
           <li class="flex items-center gap-2">
-            <i class="fas fa-map-marker-alt text-warm-yellow"></i>
-            La Molina, Lima
+            <i class="fas fa-map-marker-alt text-dorado"></i>
+            {`${data.ubicacion.distrito}, ${data.ubicacion.provincia}`}
           </li>
         </ul>
       </div>
@@ -24,14 +37,17 @@
       <div class="space-y-4">
         <h3 class="text-white font-['Playfair_Display'] text-xl">Horario</h3>
         <ul class="space-y-2">
-          <li class="flex items-center gap-2">
-            <i class="fas fa-clock text-warm-yellow"></i>
-            Lun-Vie: 8am - 6pm
-          </li>
-          <li class="flex items-center gap-2">
-            <i class="fas fa-clock text-warm-yellow"></i>
-            Sáb: 9am - 1pm
-          </li>
+          {
+            Object.keys(data.horario).map((dia) => (
+              <li class=" group flex items-center gap-2 relative">
+                <p class=" hidden px-6 leading-1 min-h-25 py-1 border group-hover:block z-50 poppins text-black bg-[url('toltip.svg')] bg-no-repeat rounded-2xl  w-48 h-auto absolute right-0 lg:right-15">
+                  <span class="text-xs  ">{data.horario[dia].mensaje}</span>
+                </p>
+                <i aria-hidden="true" class="fas fa-clock text-dorado " />
+                {`${dia}: ${data.horario[dia].entrada} - ${data.horario[dia].salida}`}
+              </li>
+            ))
+          }
         </ul>
       </div>
 
@@ -40,42 +56,48 @@
           Certificaciones
         </h3>
         <ul class="space-y-2">
-          <li class="flex items-center gap-2">
-            <i class="fas fa-certificate text-warm-yellow"></i>
-            Especialista en viveros - UNAM
-          </li>
-          <li class="flex items-center gap-2">
-            <i class="fas fa-certificate text-warm-yellow"></i>
-            Huertos sustentables - Foundation Jack Neufeld
-          </li>
-          <li class="flex items-center gap-2">
-            <i class="fas fa-certificate text-warm-yellow"></i>
-            Uso correcto de plaguisidas - Hortus
-          </li>
+          {
+            data.perfilProfesional.certificaciones.map((item) => (
+              <li class="flex items-center gap-2">
+                <i
+                  aria-hidden="true"
+                  class="fas fa-certificate text-sm text-dorado"
+                />
+                {`${item.nombre}`}
+              </li>
+            ))
+          }
         </ul>
       </div>
     </div>
 
     <div class="border-t border-stone-700 mt-12 pt-8 text-center">
-      <div class="flex justify-center gap-4 mb-4">
-        <a href="#" class="hover:text-warm-yellow">
-          <i class="fab fa-whatsapp text-xl"></i>
-        </a>
-        <a href="#" class="hover:text-warm-yellow">
-          <i class="fab fa-facebook text-xl"></i>
-        </a>
-        <a href="#" class="hover:text-warm-yellow">
-          <i class="fab fa-instagram text-xl"></i>
-        </a>
+      <div class="flex justify-center text-2xl gap-4 mb-4">
+        {
+          data.redes.map((item) => (
+            <a
+              href={item.link}
+              title={item.title}
+              aria-label={item.ariaLabel}
+              class="hover:text-warm-yellow"
+            >
+              <i aria-hidden="true" class={`${item.icon}`} />
+            </a>
+          ))
+        }
       </div>
-      <p class="text-sm">
+      <p class="">
         &copy; 2024 Jardinería Pedro - Servicios profesionales en Lima
         Metropolitana
       </p>
-      <p>
-        Desarrollado por <a
+      <p class=" ">
+        <a
           href="#"
-          class="text-emerald-300 hover:text-emerald-500">Studio Aeurola</a>
+          title="Desarrollo web y diseño digital por Studio Aeurola"
+          aria-label="Desarrollado por Studio Aeurola, expertos en diseño y desarrollo web"
+          class="text-neonCyan hover:text-emerald-500"
+        >
+          Studio Aeurola</a> | Desarrollo web y diseño digital
       </p>
     </div>
   </div>

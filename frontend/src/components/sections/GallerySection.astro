@@ -1,0 +1,17 @@
+---
+import DestacadoGalleryComponente from "../ui/DestacadoGalleryComponente.astro";
+import CardGalleryComponent from "../ui/CardGalleryComponent.astro";
+import TitleComponent from "../dynamic/TitleComponent.astro";
+const { data } = Astro.props;
+---
+
+<section id="trabajos" class="py-8 md:py-14 overflow-hidden">
+  <div class="container mx-auto px-4 md:px-6">
+    <TitleComponent palabra1="Nuestros" palabra2="Trabajos" />
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-7">
+      <DestacadoGalleryComponente data={data} />
+      {data.trabajos.map((trabajo) => <CardGalleryComponent data={trabajo} />)}
+    </div>
+  </div>
+</section>

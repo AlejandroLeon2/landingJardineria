@@ -1,0 +1,75 @@
+---
+const { data } = Astro.props;
+---
+
+<section
+  id="hero"
+  class="bg-[url('./background.svg')] bg-cover bg-no-repeat flex poppins items-center relative overflow-hidden"
+>
+  <div
+    class="container lg:place-items-center mx-auto px-6 py-24 grid md:grid-cols-2 gap-12 items-center"
+  >
+    <div class="relative z-10 space-y-8">
+      <h1
+        class="text-5xl md:text-6xl font-['Playfair_Display'] font-bold leading-tight"
+      >
+        <span class="text-verde font-['Playfair_Display'] font-bold"
+          >Jardinería Profesional</span
+        ><br />
+        en <span class="text-black font-['Playfair_Display'] font-bold"
+          >La Molina</span
+        >
+      </h1>
+
+      <div class="space-y-4">
+        <p class="text-xl font-semibold pr-3 md:pr-6 lg:w-100 text-black">
+          <i aria-hidden="true" class="fas fa-seedling text-verdenew mr-2"></i>
+          Más de 10 años transformando espacios verdes con pasión y expertise.
+        </p>
+        <ul class="text-black  list-disc pl-6 space-y-2">
+          <li>
+            <i
+              aria-hidden="true"
+              class="fas fa-certificate text-amber-400 text-xl mr-2"
+            ></i>Certificaciones de la Agraria
+          </li>
+          <li>
+            <i
+              aria-hidden="true"
+              class="fas fa-seedling text-verdenew text-xl mr-2"
+            ></i>Mantenimiento de Jardines
+          </li>
+          <li>
+            <i aria-hidden="true" class="fas fa-bug text-red-700 text-xl mr-2"
+            ></i>Control de Plagas
+          </li>
+        </ul>
+      </div>
+
+      <a
+        href="https://wa.me/924932128"
+        title="Solicitar presupuesto de jardinería"
+        aria-label="Solicitar presupuesto de jardinería por WhatsApp"
+        class="bg-neonGreen font-semibold text-black w-62 px-6 py-4 rounded-lg hover:bg-neonGreen transition-all shadow-lg duration-300 ease-in-out hover:scale-105 flex items-center gap-2"
+      >
+        <i aria-hidden="true" class="fas fa-phone"></i>
+        Solicitar Presupuesto
+      </a>
+    </div>
+
+    <div
+      class="relative group justify-center flex md:w-100 items-center h-[420px]"
+    >
+      <div
+        class="bg-gradient-to-tl from-verde to-verdeLimon w-33 h-55 absolute xl:-left-25 md:-left-18 lg:-left-20 right-14 rotate-70 md:-rotate-12 -bottom-10 md:bottom-4 rounded-tl-[90px] rounded-tr-[1000px] rounded-br-[90px] border-r-12 md:border-r-0 md:border-b-12 border border-verdenew rounded-bl-[1000px] object-cover shadow-2xl z-11 md:z-10 transform transition duration-700 group-hover:scale-105"
+      >
+      </div>
+      <img
+        src="/public/Hero-foto de jardinero Pedro.png"
+        title="Preparación de almácigos para el crecimiento saludable de plantas"
+        class="rounded-tl-[90px] md:rounded-tl-[1000px] rounded-tr-[90px] rounded-br-[1000px] border-b-12 border border-verdenew rounded-bl-[80px] h-[450px] object-cover shadow-2xl relative z-10 transform transition duration-700 group-hover:scale-105"
+        alt="Jardinero profesional realizando un almácigo para nuevas plantas en un jardín"
+      />
+    </div>
+  </div>
+</section>
