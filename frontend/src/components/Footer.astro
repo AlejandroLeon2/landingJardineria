@@ -40,7 +40,7 @@ const { data } = Astro.props;
           {
             Object.keys(data.horario).map((dia) => (
               <li class=" group flex items-center gap-2 relative">
-                <p class=" hidden px-6 leading-1 min-h-25 py-1 border group-hover:block z-50 poppins text-black bg-[url('https://raw.githubusercontent.com/AlejandroLeon2/landingJardineria/bc549f80277f2601fa9fdb6d854bb6db15e97ddd/imagenes/toltip.svg')] bg-no-repeat rounded-2xl  w-48 h-auto absolute right-0 lg:right-15">
+                <p class=" hidden px-6 leading-1 min-h-25 py-1 group-hover:block z-50 poppins text-black bg-[url('https://raw.githubusercontent.com/AlejandroLeon2/landingJardineria/bc549f80277f2601fa9fdb6d854bb6db15e97ddd/imagenes/toltip.svg')] bg-no-repeat rounded-2xl  w-48 h-auto absolute right-0 lg:right-15">
                   <span class="text-xs  ">{data.horario[dia].mensaje}</span>
                 </p>
                 <i aria-hidden="true" class="fas fa-clock text-dorado " />
@@ -87,7 +87,7 @@ const { data } = Astro.props;
         }
       </div>
       <p class="">
-        &copy; 2024 Jardinería Pedro - Servicios profesionales en Lima
+        &copy; 2024 Jardinería Miguel - Servicios profesionales en Lima
         Metropolitana
       </p>
       <p class="">

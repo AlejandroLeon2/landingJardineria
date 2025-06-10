@@ -1,30 +1,30 @@
 export const Jardinero = {
-    primerNombre: "Pedro",
+    primerNombre: "Javier",
     apellidoPat: "Alejandro",
     apellidoMaterno: "Maylle",
     edad: 48,
-    correo: "Alejandromaylle456@gmail.com",
+    correo: "Miguellmaylle456@gmail.com",
     redes: [
         {
             nombre: "WhatsApp",
             numero: 947025231,
             icon: "fab fa-whatsapp text-neonGreen",
-            link: "https://wa.me/947025231",
-            title: "WhatsApp de Jardinería Pedro",
+            link: "https://api.whatsapp.com/send/?phone=947025231&text=Hola%2C+Miguel.+Estoy+interesado+en+los+servicios+de+jardiner%C3%ADa+que+ofreces+en+La+Molina.+Me+gustar%C3%ADa+obtener+m%C3%A1s+informaci%C3%B3n+sobre+mantenimiento+de+jardines+y+poda+de+arbustos.+%C2%BFPodr%C3%ADas+compartirme+detalles+sobre+precios+y+disponibilidad%3F+Gracias%2C+espero+tu+respuesta.&type=phone_number&app_absent=0",
+            title: "WhatsApp de Jardinería Miguel",
             ariaLabel: "Contáctanos por WhatsApp para consultas rápidas sobre servicios de jardinería"
         },
         {
             nombre: "Instagram",
             icon: "fab fa-instagram text-rose-600",
-            link: "https://instagram.com/jardineria_pedro",
-            title: "Instagram de Jardinería Pedro",
+            link: "https://instagram.com/jardineria_Miguel",
+            title: "Instagram de Jardinería Miguel",
             ariaLabel: "Visita nuestro perfil de Instagram para ver proyectos de jardinería"
         },
         {
             nombre: "Facebook",
             icon: "fab fa-facebook text-blue-600",
-            link: "https://facebook.com/jardineria.pedro",
-            title: "Facebook de Jardinería Pedro",
+            link: "https://facebook.com/jardineria.Miguel",
+            title: "Facebook de Jardinería Miguel",
             ariaLabel: "Únete a nuestra comunidad en Facebook para consejos y servicios de jardinería"
         },
     ],
@@ -137,7 +137,7 @@ export const Jardinero = {
         provincia: "Lima",
         pais: "Perú",
         enlace: {
-            link: "https://jardineria-pedro.com/la-molina",
+            link: "https://jardineria-Miguel.com/la-molina",
             nombre: "Servicios en La Molina",
             tittle: "Jardinería profesional en La Molina, Lima"
         }
