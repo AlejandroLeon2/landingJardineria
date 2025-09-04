@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg1"
+   width="170"
+   height="87"
+   viewBox="0 0 170 87"
+   sodipodi:docname="toltip.svg"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="3.1413422"
+     inkscape:cx="82.926336"
+     inkscape:cy="8.4358845"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <path
+     style="fill:#fff;stroke-width:1.20786"
+     d="M 14.732566,85.244366 C 13.998222,84.212612 13.509763,79.22392 13.509763,72.755596 V 61.984853 L 7.1704379,52.998268 0.83111349,44.011683 7.1704379,35.025098 13.509763,26.038513 V 14.551927 c 0,-7.0250922 0.474946,-12.1538853 1.222803,-13.2046157 1.770016,-2.4868533 153.729704,-2.4868533 155.499714,0 1.74458,2.4511254 1.74458,81.4459297 0,83.8970547 -1.77001,2.486853 -153.729698,2.486853 -155.499714,0 z"
+     id="path2"
+     sodipodi:nodetypes="sscccccsssss" />
+</svg>
